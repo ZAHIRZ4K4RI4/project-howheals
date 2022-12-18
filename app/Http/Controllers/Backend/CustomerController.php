@@ -10,17 +10,17 @@ class CustomerController extends Controller
 {
     public function CustomerView()
     {
-        // $allDataCustomer=Customer::all();
+        $allDataCustomer=Customer::all();
         $data=Customer::all();
-        return view('backend.customers.view_customer', compact('data'));
+        return view('backend.customers.view', compact('data'));
     }
   
 
      public function CustomerAdd()
      {
          // $allData Customer= Customer::all();
-         //$data['allData Customer']= Customer::all();
-        return view('backend.customer.add_customer');
+        $data=Customer::all();
+        return view('backend.customers.add');
      }
 
      public function CustomerStore(Request $request)
@@ -37,13 +37,13 @@ class CustomerController extends Controller
          $data->password = bcrypt($request->password);
          $data->save();
 
-         return redirect()->route('customer.view')->with('info', 'Tambah Customer Berhasil');
+         return redirect()->route('backend.customer.view')->with('info', 'Tambah Customer Berhasil');
      }
 
      public function CustomerEdit($id)
      {
          $editData = Customer::find($id);
-         return view('backend.customer.edit_customer', compact('editData'));
+         return view('backend.customers.edit', compact('editData'));
      }
 
      public function CustomerUpdate(Request $request, $id)
@@ -63,7 +63,7 @@ class CustomerController extends Controller
 
          $data->save();
 
-         return redirect()->route('customer.view')->with('info', 'Update Customer Berhasil');
+         return redirect()->route('customers.view')->with('info', 'Update Customer Berhasil');
      }
 
      public function CustomerDelete($id)
@@ -72,7 +72,7 @@ class CustomerController extends Controller
          $deleteData->delete();
 
 
-         return redirect()->route('customer.view')->with('info', 'Delete Customer Berhasil');
+         return redirect()->route('customers.view')->with('info', 'Delete Customer Berhasil');
      }
 }
 

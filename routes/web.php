@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\CustomerController;
+use App\Http\Controllers\Backend\TransaksiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,8 +37,18 @@ Route::get('/admin/logout', [AdminController::class, 'logout'])->name('admin.log
 Route::prefix('customers')->group(function () {
     Route::get('/view', [CustomerController::class, 'CustomerView'])->name('backend.customers.view');
     Route::get('/add', [CustomerController::class, 'CustomerAdd'])->name('backend.customers.add');
-    Route::post('/store', [CustomerController::class, 'CustomerStore'])->name('backend.customers.store');
-    Route::get('/edit/{id}', [CustomerController::class, 'CustomerEdit'])->name('backend.customers.edit');
-    Route::post('/update/{id}', [CustomerController::class, 'CustomerUpdate'])->name('backend.customers.update');
-    Route::get('/delete/{id}', [CustomerController::class, 'CustomerDelete'])->name('backend.customers.delete');
+    // Route::post('/store', [CustomerController::class, 'CustomerStore'])->name('customers.store');
+    // Route::get('/edit', [CustomerController::class, 'CustomerEdit'])->name('backend.customers.edit');
+    // Route::post('/update/{id}', [CustomerController::class, 'CustomerUpdate'])->name('customers.update');
+    // Route::get('/delete/{id}', [CustomerController::class, 'CustomerDelete'])->name('backend.customers.delete');
+});
+
+//route transaksi
+Route::prefix('transaksis')->group(function () {
+    Route::get('/view', [TransaksiController::class, 'TransaksiView'])->name('backends.transaksi.view');
+    Route::get('/add', [TransaksiController::class, 'TransaksiAdd'])->name('backends.transaksi.add');
+//     Route::post('/store', [TransaksiController::class, 'TransaksiStore'])->name('transaksi.store');
+//     Route::get('/edit', [TransaksiController::class, 'TransaksiEdit'])->name('backend.transaksi.edit');
+//     Route::post('/update/{id}', [TransaksiController::class, 'TransaksiUpdate'])->name('transaksi.update');
+//     Route::get('/delete/{id}', [TransaksiController::class, 'TransaksiDelete'])->name('backend.transaksi.delete');
 });
