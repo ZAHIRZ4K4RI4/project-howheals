@@ -12,7 +12,7 @@ class CustomerController extends Controller
     {
         $allDataCustomer=Customer::all();
         $data=Customer::all();
-        return view('backend.customers.view', compact('data'));
+        return view('backend.customers.view_customer', compact('data'));
     }
   
 

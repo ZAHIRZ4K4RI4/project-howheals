@@ -12,7 +12,7 @@ class TransaksiController extends Controller
     {
         $allDataTransaksi=transaksi::all();
         $data=transaksi::all();
-        return view('backends.transaksi.view_customer', compact('data'));
+        return view('backends.transaksi.view_transaksi', compact('data'));
     }
   
 
@@ -20,7 +20,7 @@ class TransaksiController extends Controller
      {
          // $allData Transaksi= Transaksi::all();
         $data=Transaksi::all();
-        return view('backends.transaksi.add_customer');
+        return view('backends.transaksi.add_transaksi');
      }
 
      public function TransaksiStore(Request $request)
