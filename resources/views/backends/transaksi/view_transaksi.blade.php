@@ -39,38 +39,48 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
-                                <strong class="card-title">Data Table</strong>
+                                <strong class="card-title">Data Transaksi</strong>
                             </div>
                             <div class="card-body">
                                 <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
                                     <thead>
-                                        {{-- {{-- @@foreach (allDataCustomer as $key => $Customer)
-                                        @endforeach --}}
-                                        <tr>
-                                            <th>Id</th>
-                                            <th>Total Bayar</th>
-                                            <th>Tanggal Bayar</th>
-                                            <th>Bukti Transfer</th>
-                                            <th>Action</th>     
-                                        </tr> 
                                     </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Id</td>
+                                                <td>Type Sepatu</td>
+                                                <td>Pelayanan</td>
+                                                <td>Tanggal Masuk</td>
+                                                <td>Estimasi Selesai</td>
+                                                <td>Total Bayar</td>
+                                                <td>Tanggal Bayar</td>
+                                                <td>Action</td>
+                                                <td>
+                                            </tr>        
+                                        </tbody>
+                                    
                                     <tbody>
+                                        @foreach($allDataTransaksi as $key => $transaksi)
                                         <tr>
-                                            <td>#</td>
-                                            <td>#</td>
-                                            <td>#</td>
-                                            <td>#</td>
+                                            <td>{{ $key+1 }}</td>
+                                            <td>{{$transaksi->typesepatu}}</td>
+                                            <td>{{$transaksi->pelayanan}}</td>
+                                            <td>{{$transaksi->tanggalmasuk}}</td>
+                                            <td>{{$transaksi->estimasiselesai}}</td>
+                                            <td>{{$transaksi->totalbayar}}</td>
+                                            <td>{{$transaksi->tanggalbayar}}</td>
                                             <td>
                                                 <a href="" class="btn btn-dark">Edit</a>
-                                                <a href="" class="btn btn-warning">Delete</a>
+                                                <a href="{{route('transaksi.delete', $transaksi->id)}}" class="btn btn-danger">Delete</a>
                                             </td>
                                         </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>
+                            <a href="{{ route('backends.transaksi.add')}}"><button class="btn btn-dark" type="submit">Tambahkan Data</button></a>
                         </div>
                     </div>
-                    <a href=""><button class="btn btn-dark" type="submit">Tambah Customers</button></a>
                 </div>
             </div><!-- .animated -->
         </div><!-- .content -->

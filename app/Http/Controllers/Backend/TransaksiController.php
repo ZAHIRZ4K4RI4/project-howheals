@@ -10,9 +10,8 @@ class TransaksiController extends Controller
 {
     public function TransaksiView()
     {
-        $allDataTransaksi=transaksi::all();
-        $data=transaksi::all();
-        return view('backends.transaksi.view_transaksi', compact('data'));
+        $data['allDataTransaksi'] = Transaksi::all();
+        return view('backends.transaksi.view_transaksi', $data);
     }
   
 
@@ -32,8 +31,13 @@ class TransaksiController extends Controller
 
          $data = new Transaksi();
          $data->Transaksitype = $request->selectTransaksi;
-         $data->name = $request->textNama;
-         $data->email = $request->email;
+         $data->typesepatu = $request->typesepatu;
+         $data->pelayanan = $request->pelayanan;
+         $data->tanggalmasuk = $request->tanggalmasuk;
+         $data->estimasiselesai = $request->estimasiselesai;
+         $data->totalbayar = $request->totalbayar;
+         $data->tanggalbayar = $request->tanggalbayar;
+         
          $data->password = bcrypt($request->password);
          $data->save();
 
@@ -46,21 +50,14 @@ class TransaksiController extends Controller
          return view('backends.transaksi.edit', compact('editData'));
      }
 
-     public function TransaksiUpdate(Request $request, $id)
-     {
-         $validateData = $request->validate([
-             'email' => 'required|unique:Transaksi',
-             'textNama' => 'required',
-         ]);
-
+     public function TransaksiUpdate(Request $request, $id){
          $data = Transaksi::find($id);
-         $data->Transaksitype = $request->selectTransaksi;
-         $data->name = $request->textNama;
-         $data->email = $request->email;
-          if($request->password!=""){
-              $data->password=bcrypt($request->password);
-          }
-
+         $data->name = $request->typesepatu;
+         $data->pelayanan = $request->pelayanan;
+         $data->tanggalmasuk = $request->tanggalmasuk;
+         $data->estimasiselesai = $request->estimasiselesai;
+         $data->totalbayar = $request->totalbayar;
+         $data->tanggalbayar = $request->tanggalbayar;
          $data->save();
 
          return redirect()->route('backends.transaksi.view')->with('info', 'Update Transaksi Berhasil');

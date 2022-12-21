@@ -16,12 +16,9 @@ return new class extends Migration
         Schema::create('customers', function (Blueprint $table) {
             $table->id();
             $table->string('nama',100);
-            $table->integer('telepon');
+            $table->BigInteger('telepon');
             $table->string('alamat',100);
-            $table->string('typesepatu',100);
-            $table->string('status',100);
             $table->string('email',100);
-            $table->string('kategori',100);
             $table->timestamps();
         });
     }

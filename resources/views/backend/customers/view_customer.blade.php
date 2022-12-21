@@ -44,8 +44,6 @@
                             <div class="card-body">
                                 <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
                                     <thead>
-                                        {{-- {{-- @@foreach (allDataCustomer as $key => $Customer)
-                                        @endforeach --}}
                                         <tr>
                                             <th>Id</th>
                                             <th>Nama</th>
@@ -56,23 +54,25 @@
                                         </tr> 
                                     </thead>
                                     <tbody>
+                                        @foreach($allDataCustomer as $key => $customer)
                                         <tr>
-                                            <td>#</td>
-                                            <td>#</td>
-                                            <td>#</td>
-                                            <td>#</td>
-                                            <td>#</td>
+                                            <td>{{ $key+1 }}</td>
+                                            <td>{{$customer->nama}}</td>
+                                            <td>{{$customer->telepon}}</td>
+                                            <td>{{$customer->alamat}}</td>
+                                            <td>{{$customer->email}}</td>
                                             <td>
-                                                <a href="" class="btn btn-dark">Edit</a>
-                                                <a href="" class="btn btn-warning">Delete</a>
+                                                <a href="#" class="btn btn-info">Edit</a>
+                                                <a href="{{route('customers.delete', $customer->id)}}" class="btn btn-danger">Delete</a>
                                             </td>
                                         </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>
+                            <a href="{{ route('backend.customers.add')}}"><button type="submit" class="btn btn-rounded btn-info">Tambahkan</button>
                         </div>
                     </div>
-                    <a href=""><button class="btn btn-dark" type="submit">Tambah Customers</button></a>
                 </div>
             </div><!-- .animated -->
         </div><!-- .content -->

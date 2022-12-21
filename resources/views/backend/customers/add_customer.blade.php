@@ -9,7 +9,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Sufee Admin - HTML5 Admin Template</title>
+    <title>TAMBAHKAN DATA</title>
     <meta name="description" content="Sufee Admin - HTML5 Admin Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -42,18 +42,7 @@
             <div class="col-sm-4">
                 <div class="page-header float-left-bold">
                     <div class="page-title-bold">
-                        <p>Tabel Tambah Customer</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-8">
-                <div class="page-header float-right">
-                    <div class="page-title">
-                        <ol class="breadcrumb text-right">
-                            <li><a href="#">Dashboard</a></li>
-                            <li><a href="#">Forms</a></li>
-                            <li class="active">Advanced</li>
-                        </ol>
+                        <h1>Tambahkan Customer</h1>
                     </div>
                 </div>
             </div>
@@ -84,12 +73,11 @@
                                         <input class="form-control" name="telepon">
                                     </div>
                                 </div>
-                                
-                                <a class="btn btn-dark" href="#" role="button">Tambahkan Customer</a>
                             </div>
                         </div>
+                        <button type="submit" href=" {{ route('backend.customers.view')}}" class="btn btn-rounded btn-info">TAMBAHKAN</button>
                     </div>
-
+                    
                     <div class="col-xs-6 col-sm-6">
                         <div class="card">
                             <div class="card-header">
@@ -112,7 +100,8 @@
                         </div>
                     </div>
                 </div>
-            </div><!-- .animated -->
+                            
+          </div><!-- .animated -->
         </div><!-- .content -->
 
     </div><!-- /#right-panel -->

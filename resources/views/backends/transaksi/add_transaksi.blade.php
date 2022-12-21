@@ -39,25 +39,13 @@
         <!-- Header-->
 
         <div class="breadcrumbs">
-            <div class="col-sm-4">
+            <div class="col-sm-12">
                 <div class="page-header float-left-bold">
                     <div class="page-title-bold">
-                        <p>Tabel Tambah Customer</p>
+                        <h1>Data Transaksi</h1>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-8">
-                <div class="page-header float-right">
-                    <div class="page-title">
-                        <ol class="breadcrumb text-right">
-                            <li><a href="#">Dashboard</a></li>
-                            <li><a href="#">Forms</a></li>
-                            <li class="active">Advanced</li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-        </div>
+
 
         <div class="content mt-3">
             <div class="animated fadeIn">
@@ -67,29 +55,35 @@
                     <div class="col-xs-6 col-sm-6">
                         <div class="card">
                             <div class="card-header">
-                                <strong>Input Customer</strong>
+                                <strong>Input Transaksi</strong>
                             </div>
                             <div class="card-body card-block">
                                 <div class="form-group">
-                                    <label class=" form-control-label">Nama</label>
+                                    <label class=" form-control-label">Type Sepatu</label>
                                     <div class="input-group">
                                         <div class="input-group-addon"><i class="fa fa-male"></i></div>
-                                        <input class="form-control" name="nama">
+                                        <input class="form-control" name="Type Sepatu">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class=" form-control-label">Telp</label>
+                                    <label class=" form-control-label">Pelayanan</label>
                                     <div class="input-group">
                                         <div class="input-group-addon"><i class="fa fa-phone"></i></div>
-                                        <input class="form-control" name="telepon">
+                                        <input class="form-control" name="pelayanan">
                                     </div>
                                 </div>
-                                
-                                <a class="btn btn-dark" href="#" role="button">Tambahkan Transaksi</a>
+                                <div class="form-group">
+                                    <label class=" form-control-label">Tanggal Masuk</label>
+                                    <div class="input-group">
+                                        <div class="input-group-addon"><i class="fa fa-phone"></i></div>
+                                        <input class="form-control" name="tanggal masuk">
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        <a class="btn btn-dark" href="#" role="button">Tambahkan Data</a>
                     </div>
-
+                    
                     <div class="col-xs-6 col-sm-6">
                         <div class="card">
                             <div class="card-header">
@@ -97,17 +91,25 @@
                             </div>
                             <div class="card-body card-block">
                                 <div class="form-group">
-                                    <label class=" form-control-label">Alamat</label>
+                                    <label class=" form-control-label">Estimasi Selesai</label>
                                     <div class="input-group">
                                         <div class="input-group-addon"><i class="fa fa-credit-card"></i></div>
-                                        <input class="form-control" name="alamat">
+                                        <input class="form-control" name="Estimasi Selesai">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class=" form-control-label">Email</label>
+                                    <label class=" form-control-label">Total Bayar</label>
                                     <div class="input-group">
                                         <div class="input-group-addon"><i class="fa fa-credit-card"></i></div>
-                                        <input class="form-control" name="email">
+                                        <input class="form-control" name="Total Bayar">
+                                </div>
+                                <div class="form-group">
+                                    <label class=" form-control-label">Tanggal Bayar</label>
+                                    <div class="input-group">
+                                        <div class="input-group-addon"><i class="fa fa-credit-card"></i></div>
+                                        <input class="form-control" name="Tanggal Bayar">
+                                </div>
+                                
                             </div>
                         </div>
                     </div>
