@@ -33,22 +33,14 @@ class CustomerController extends Controller
 
      public function CustomerStore(Request $request)
      {
-         $validateData = $request->validate([
-             'email' => 'required|unique:customers',
-             'textNama' => 'required',
-         ]);
-
          $data = new Customer();
-         $data->customertype = $request->selectCustomer;
          $data->nama = $request->nama;
          $data->telepon = $request->telepon;
          $data->alamat = $request->alamat;
          $data->email = $request->email;
-
-         $data->password = bcrypt($request->password);
          $data->save();
 
-         return redirect()->route('backend.customer.view')->with('info', 'Tambah Customer Berhasil');
+         return redirect()->route('backend.customers.view')->with('info', 'Tambah Customer Berhasil');
      }
 
      public function CustomerEdit($id)
@@ -65,7 +57,7 @@ class CustomerController extends Controller
          $data->email = $request->email;
          $data->save();
 
-         return redirect()->route('view.customers')->with('info', 'Update Customer Berhasil');
+         return redirect()->route('backend.customers.view')->with('info', 'Update Customer Berhasil');
      }
 
      public function CustomerDelete($id)

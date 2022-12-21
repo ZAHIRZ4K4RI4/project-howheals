@@ -62,7 +62,7 @@
                                             <td>{{$customer->alamat}}</td>
                                             <td>{{$customer->email}}</td>
                                             <td>
-                                                <a href="#" class="btn btn-info">Edit</a>
+                                                <a href="{{route('customers.edit', $customer->id)}}" class="btn btn-info">Edit</a>
                                                 <a href="{{route('customers.delete', $customer->id)}}" class="btn btn-danger">Delete</a>
                                             </td>
                                         </tr>

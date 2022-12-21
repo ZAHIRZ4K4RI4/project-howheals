@@ -55,7 +55,8 @@
     
         <!-- Left Panel -->
             <!-- Header-->
-    
+            <form action="{{ route('customers.update', $editData->id)}}" method="POST">
+            @csrf
             <div class="breadcrumbs">
                 <div class="col-sm-4">
                     <div class="page-header float-left-bold">
@@ -81,18 +82,16 @@
                                         <label class=" form-control-label">Nama</label>
                                         <div class="input-group">
                                             <div class="input-group-addon"><i class="fa fa-male"></i></div>
-                                            <input class="form-control" name="nama">
+                                            <input class="form-control" name="nama" value="{{$editData->nama}}">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class=" form-control-label">Telp</label>
                                         <div class="input-group">
                                             <div class="input-group-addon"><i class="fa fa-phone"></i></div>
-                                            <input class="form-control" name="telepon">
+                                            <input class="form-control" name="telepon" value="{{$editData->telepon}}">
                                         </div>
                                     </div>
-                                    
-                                    <a class="btn btn-dark" href="#" role="button">Tambahkan Customer</a>
                                 </div>
                             </div>
                         </div>
@@ -107,22 +106,24 @@
                                         <label class=" form-control-label">Alamat</label>
                                         <div class="input-group">
                                             <div class="input-group-addon"><i class="fa fa-credit-card"></i></div>
-                                            <input class="form-control" name="alamat">
+                                            <input class="form-control" name="alamat" value="{{$editData->alamat}}">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class=" form-control-label">Email</label>
                                         <div class="input-group">
                                             <div class="input-group-addon"><i class="fa fa-credit-card"></i></div>
-                                            <input class="form-control" name="email">
+                                            <input class="form-control" name="email" value="{{$editData->email}}">
                                 </div>
                             </div>
+                           <button type="submit"  class="btn btn-rounded btn-info">TAMBAHKAN</button>
                         </div>
                     </div>
                 </div><!-- .animated -->
             </div><!-- .content -->
     
         </div><!-- /#right-panel -->
+    </form>
     
         <!-- Right Panel -->
     

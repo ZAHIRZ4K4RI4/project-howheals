@@ -24,23 +24,15 @@ class TransaksiController extends Controller
 
      public function TransaksiStore(Request $request)
      {
-         $validateData = $request->validate([
-             'email' => 'required|unique:Transaksi',
-             'textNama' => 'required',
-         ]);
-
          $data = new Transaksi();
          $data->Transaksitype = $request->selectTransaksi;
-         $data->typesepatu = $request->typesepatu;
+         $data->typesepatu = $request->type_sepatu;
          $data->pelayanan = $request->pelayanan;
-         $data->tanggalmasuk = $request->tanggalmasuk;
-         $data->estimasiselesai = $request->estimasiselesai;
-         $data->totalbayar = $request->totalbayar;
-         $data->tanggalbayar = $request->tanggalbayar;
-         
-         $data->password = bcrypt($request->password);
+         $data->tanggalmasuk = $request->tanggal_masuk;
+         $data->estimasiselesai = $request->estimasi_selesai;
+         $data->totalbayar = $request->total_bayar;
+         $data->tanggalbayar = $request->tanggal_bayar;
          $data->save();
-
          return redirect()->route('backends.transaksi.view')->with('info', 'Tambah Transaksi Berhasil');
      }
 
@@ -52,12 +44,12 @@ class TransaksiController extends Controller
 
      public function TransaksiUpdate(Request $request, $id){
          $data = Transaksi::find($id);
-         $data->name = $request->typesepatu;
+         $data->name = $request->type_sepatu;
          $data->pelayanan = $request->pelayanan;
-         $data->tanggalmasuk = $request->tanggalmasuk;
-         $data->estimasiselesai = $request->estimasiselesai;
-         $data->totalbayar = $request->totalbayar;
-         $data->tanggalbayar = $request->tanggalbayar;
+         $data->tanggalmasuk = $request->tanggal_masuk;
+         $data->estimasiselesai = $request->estimasi_selesai;
+         $data->totalbayar = $request->total_bayar;
+         $data->tanggalbayar = $request->tanggal_bayar;
          $data->save();
 
          return redirect()->route('backends.transaksi.view')->with('info', 'Update Transaksi Berhasil');

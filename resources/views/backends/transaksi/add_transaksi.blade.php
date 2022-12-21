@@ -37,6 +37,8 @@
 
     <!-- Left Panel -->
         <!-- Header-->
+        <form action="{{ route('transaksi.store')}}" method="POST">
+        @csrf
 
         <div class="breadcrumbs">
             <div class="col-sm-12">
@@ -81,7 +83,6 @@
                                 </div>
                             </div>
                         </div>
-                        <a class="btn btn-dark" href="#" role="button">Tambahkan Data</a>
                     </div>
                     
                     <div class="col-xs-6 col-sm-6">
@@ -108,16 +109,17 @@
                                     <div class="input-group">
                                         <div class="input-group-addon"><i class="fa fa-credit-card"></i></div>
                                         <input class="form-control" name="Tanggal Bayar">
+                                    </div>   
                                 </div>
-                                
+                                <button type="submit"  class="btn btn-rounded btn-info">TAMBAHKAN</button>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div><!-- .animated -->
-        </div><!-- .content -->
-
+                </div><!-- .animated -->
+            </div><!-- .content -->
+        </form>
     </div><!-- /#right-panel -->
+
 
     <!-- Right Panel -->
 

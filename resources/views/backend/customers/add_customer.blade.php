@@ -37,74 +37,78 @@
 
     <!-- Left Panel -->
         <!-- Header-->
-
-        <div class="breadcrumbs">
-            <div class="col-sm-4">
-                <div class="page-header float-left-bold">
-                    <div class="page-title-bold">
-                        <h1>Tambahkan Customer</h1>
-                    </div>
+    <form action="{{ route('customers.store')}}" method="POST">
+    @csrf
+    <div class="breadcrumbs">
+        <div class="col-sm-4">
+            <div class="page-header float-left-bold">
+                <div class="page-title-bold">
+                    <h1>Tambahkan Customer</h1>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="content mt-3">
-            <div class="animated fadeIn">
+    <div class="content mt-3">
+        <div class="animated fadeIn">
 
-                <div class="row">
+            <div class="row">
 
-                    <div class="col-xs-6 col-sm-6">
-                        <div class="card">
-                            <div class="card-header">
-                                <strong>Input Customer</strong>
-                            </div>
-                            <div class="card-body card-block">
-                                <div class="form-group">
-                                    <label class=" form-control-label">Nama</label>
-                                    <div class="input-group">
-                                        <div class="input-group-addon"><i class="fa fa-male"></i></div>
-                                        <input class="form-control" name="nama">
-                                    </div>
+                <div class="col-xs-6 col-sm-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <strong>Input Customer</strong>
+                        </div>
+                        <div class="card-body card-block">
+                            <div class="form-group">
+                                <label class=" form-control-label">Nama</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="fa fa-male"></i></div>
+                                    <input class="form-control" name="nama">
                                 </div>
-                                <div class="form-group">
-                                    <label class=" form-control-label">Telp</label>
-                                    <div class="input-group">
-                                        <div class="input-group-addon"><i class="fa fa-phone"></i></div>
-                                        <input class="form-control" name="telepon">
-                                    </div>
+                            </div>
+                            <div class="form-group">
+                                <label class=" form-control-label">Telp</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="fa fa-phone"></i></div>
+                                    <input class="form-control" name="telepon">
                                 </div>
                             </div>
                         </div>
-                        <button type="submit" href=" {{ route('backend.customers.view')}}" class="btn btn-rounded btn-info">TAMBAHKAN</button>
                     </div>
                     
-                    <div class="col-xs-6 col-sm-6">
-                        <div class="card">
-                            <div class="card-header">
-                                {{-- <strong>Masked Input</strong> <small> Small Text Mask</small> --}}
-                            </div>
-                            <div class="card-body card-block">
-                                <div class="form-group">
-                                    <label class=" form-control-label">Alamat</label>
-                                    <div class="input-group">
-                                        <div class="input-group-addon"><i class="fa fa-credit-card"></i></div>
-                                        <input class="form-control" name="alamat">
-                                    </div>
+                </div>
+                
+                <div class="col-xs-6 col-sm-6">
+                    <div class="card">
+                        <div class="card-header">
+                            {{-- <strong>Masked Input</strong> <small> Small Text Mask</small> --}}
+                        </div>
+                        <div class="card-body card-block">
+                            <div class="form-group">
+                                <label class=" form-control-label">Alamat</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="fa fa-credit-card"></i></div>
+                                    <input class="form-control" name="alamat">
                                 </div>
-                                <div class="form-group">
-                                    <label class=" form-control-label">Email</label>
-                                    <div class="input-group">
-                                        <div class="input-group-addon"><i class="fa fa-credit-card"></i></div>
-                                        <input class="form-control" name="email">
                             </div>
+                            <div class="form-group">
+                                <label class=" form-control-label">Email</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="fa fa-credit-card"></i></div>
+                                    <input class="form-control" name="email">
                         </div>
                     </div>
+                    <button type="submit"  class="btn btn-rounded btn-info">TAMBAHKAN</button>
                 </div>
-                            
-          </div><!-- .animated -->
-        </div><!-- .content -->
+            </div>
+                        
+      </div><!-- .animated -->
+    </div><!-- .content -->
 
-    </div><!-- /#right-panel -->
+</div><!-- /#right-panel -->
+</form>
+       
 
     <!-- Right Panel -->
 

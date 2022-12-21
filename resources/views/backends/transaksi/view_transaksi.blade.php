@@ -44,7 +44,6 @@
                             <div class="card-body">
                                 <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
                                     <thead>
-                                    </thead>
                                         <tbody>
                                             <tr>
                                                 <td>Id</td>
@@ -58,17 +57,17 @@
                                                 <td>
                                             </tr>        
                                         </tbody>
-                                    
+                                    </thead>    
                                     <tbody>
                                         @foreach($allDataTransaksi as $key => $transaksi)
                                         <tr>
                                             <td>{{ $key+1 }}</td>
-                                            <td>{{$transaksi->typesepatu}}</td>
+                                            <td>{{$transaksi->type_sepatu}}</td>
                                             <td>{{$transaksi->pelayanan}}</td>
-                                            <td>{{$transaksi->tanggalmasuk}}</td>
-                                            <td>{{$transaksi->estimasiselesai}}</td>
-                                            <td>{{$transaksi->totalbayar}}</td>
-                                            <td>{{$transaksi->tanggalbayar}}</td>
+                                            <td>{{$transaksi->tanggal_masuk}}</td>
+                                            <td>{{$transaksi->estimasi_selesai}}</td>
+                                            <td>{{$transaksi->total_bayar}}</td>
+                                            <td>{{$transaksi->tanggal_bayar}}</td>
                                             <td>
                                                 <a href="" class="btn btn-dark">Edit</a>
                                                 <a href="{{route('transaksi.delete', $transaksi->id)}}" class="btn btn-danger">Delete</a>
