@@ -11,4 +11,7 @@ class Customer extends Model
     protected $table='customers';
     protected $primarykey='id';
     public $timestamps=true;
+    protected $fillable=[
+        'nama','telepon','alamat','email'
+    ];
 }
