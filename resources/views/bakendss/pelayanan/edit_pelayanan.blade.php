@@ -37,13 +37,13 @@
 
     <!-- Left Panel -->
         <!-- Header-->
-<form action="{{ route('transaksis.update', $editData->id)}}" method="POST">
+<form action="{{ route('pelayanan.update', $editData->id)}}" method="POST">
     @csrf
         <div class="breadcrumbs">
             <div class="col-sm-6">
                 <div class="page-header float-left-bold">
                     <div class="page-title-bold">
-                        <h1>Data Transaksi</h1>
+                        <h1>Data Pelayanan</h1>
                     </div>
                 </div>
             </div>
@@ -56,9 +56,22 @@
                         <div class="col-xs-6 col-sm-6">
                             <div class="card">
                                 <div class="card-header">
-                                    <strong>Input Transaksi</strong>
+                                    <strong>Input Pelayanan</strong>
                                 </div>
                                 <div class="card-body card-block">
+                                    <div class="form-group">
+                                        <label class=" form-control-label">Type Sepatu</label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon"><i class="fa fa-male"></i></div>
+                                            <input class="form-control" name="type_sepatu" value="{{$editData->type_sepatu}}">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class=" form-control-label">Pelayanan</label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon"><i class="fa fa-phone"></i></div>
+                                            <input class="form-control" name="pelayanan" value="{{$editData->pelayanan}}">
+                                        </div>
                                     </div>
                                     <div class="form-group">
                                         <label class=" form-control-label">Tanggal Masuk</label>
@@ -66,18 +79,35 @@
                                             <div class="input-group-addon"><i class="fa fa-phone"></i></div>
                                             <input class="form-control" name="tanggal_masuk" value="{{$editData->tanggal_masuk}}">
                                         </div>
-                                    </div>                           
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-xs-6 col-sm-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    {{-- <strong>Masked Input</strong> <small> Small Text Mask</small> --}}
+                                </div>
+                                <div class="card-body card-block">
                                     <div class="form-group">
-                                        <label class=" form-control-label">Total Bayar</label>
+                                        <label class=" form-control-label">Harga</label>
                                         <div class="input-group">
                                             <div class="input-group-addon"><i class="fa fa-credit-card"></i></div>
-                                            <input class="form-control" name="total_bayar" value="{{$editData->total_bayar}}">
+                                            <input class="form-control" name="harga" value="{{$editData->harga}}">
+                                        </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class=" form-control-label">Tanggal Bayar</label>
+                                        <label class=" form-control-label">Tanggal Masuk</label>
                                         <div class="input-group">
                                             <div class="input-group-addon"><i class="fa fa-credit-card"></i></div>
-                                            <input class="form-control" name="tanggal_bayar" value="{{$editData->tanggal_bayar}}">
+                                            <input class="form-control" name="tanggal_masuk" value="{{$editData->tanggal_masuk}}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class=" form-control-label">Estimasi Selesai</label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon"><i class="fa fa-credit-card"></i></div>
+                                            <input class="form-control" name="estimasi_selesai" value="{{$editData->estimasi_selesai}}">
                                         </div>   
                                     </div>
                                     <button type="submit"  class="btn btn-rounded btn-info">TAMBAHKAN</button>

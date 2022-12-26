@@ -9,7 +9,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Tabel Transaksi</title>
+    <title>Tabel Pelayanan</title>
     <meta name="description" content="Sufee Admin - HTML5 Admin Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -39,7 +39,7 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
-                                <strong class="card-title">Tambahkan Transaksi</strong>
+                                <strong class="card-title">Data Pelayanan</strong>
                             </div>
                             <div class="card-body">
                                 <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
@@ -47,31 +47,35 @@
                                         <tbody>
                                             <tr>
                                                 <td>Id</td>
+                                                <td>Type Sepatu</td>
+                                                <td>Pelayanan</td>
+                                                <td>Harga</td>
                                                 <td>Tanggal Masuk</td>
-                                                <td>Total Bayar</td>
-                                                <td>Tanggal Bayar</td>
+                                                <td>Estimasi Selesai</td>
                                                 <td>Action</td>
                                                 <td>
                                             </tr>        
                                         </tbody>
                                     </thead>    
                                     <tbody>
-                                        @foreach($allDataTransaksi as $key => $transaksi)
+                                        @foreach($allDataPelayanan as $key => $pelayanan)
                                         <tr>
                                             <td>{{ $key+1 }}</td>
-                                            <td>{{$transaksi->tanggal_masuk}}</td>
-                                            <td>{{$transaksi->total_bayar}}</td>
-                                            <td>{{$transaksi->tanggal_bayar}}</td>
+                                            <td>{{$pelayanan->type_sepatu}}</td>
+                                            <td>{{$pelayanan->pelayanan}}</td>
+                                            <td>{{$pelayanan->harga}}</td>
+                                            <td>{{$pelayanan->tanggal_masuk}}</td>
+                                            <td>{{$pelayanan->estimasi_selesai}}</td>
                                             <td>
-                                                <a href="{{route('transaksi.edit', $transaksi->id)}}" class="btn btn-info">Edit</a>
-                                                <a href="{{route('transaksi.delete', $transaksi->id)}}" class="btn btn-danger">Delete</a>
+                                                <a href="{{route('pelayanan.edit', $pelayanan->id)}}" class="btn btn-info">Edit</a>
+                                                <a href="{{route('pelayanan.delete', $pelayanan->id)}}" class="btn btn-danger">Delete</a>
                                             </td>
                                         </tr>
                                         @endforeach
                                     </tbody>
                                 </table>
                             </div>
-                            <a href="{{ route('backends.transaksi.add')}}"><button class="btn btn-dark" type="submit">Tambahkan Data</button></a>
+                            <a href="{{ route('backendss.pelayanan.add')}}"><button class="btn btn-dark" type="submit">Tambahkan Data</button></a>
                         </div>
                     </div>
                 </div>

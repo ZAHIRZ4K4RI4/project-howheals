@@ -2,6 +2,9 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\CustomerController;
+use App\Http\Controllers\Api\TransaksiController;
+use App\Http\Controllers\Api\PelayananController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +20,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::post('/customer',[customerController::class, 'store']);
+Route::post('/transaksi',[transaksiController::class, 'store']);
+Route::post('/pelayanan',[pelayananController::class, 'store']);

@@ -27,7 +27,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>TAMBAHKAN DATA</title>
+        <title>EDIT DATA</title>
         <meta name="description" content="Sufee Admin - HTML5 Admin Template">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     
@@ -61,7 +61,7 @@
                 <div class="col-sm-4">
                     <div class="page-header float-left-bold">
                         <div class="page-title-bold">
-                            <h1>Tabel Tambah Customer</h1>
+                            <h1>EDIT CUSTOMER</h1>
                         </div>
                     </div>
                 </div>
@@ -121,7 +121,6 @@
                     </div>
                 </div><!-- .animated -->
             </div><!-- .content -->
-    
         </div><!-- /#right-panel -->
     </form>
     

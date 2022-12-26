@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\CustomerController;
 use App\Http\Controllers\Backend\TransaksiController;
+use App\Http\Controllers\Backend\PelayananController;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,7 +49,17 @@ Route::prefix('transaksis')->group(function () {
     Route::get('/view', [TransaksiController::class, 'TransaksiView'])->name('backends.transaksi.view');
     Route::get('/add', [TransaksiController::class, 'TransaksiAdd'])->name('backends.transaksi.add');
     Route::post('/store', [TransaksiController::class, 'TransaksiStore'])->name('transaksi.store');
-    Route::get('/edit', [TransaksiController::class, 'TransaksiEdit'])->name('backend.transaksi.edit.view');
-    Route::post('/update/{id}', [TransaksiController::class, 'TransaksiUpdate'])->name('transaksi.update');
+    Route::get('/edit/{id}', [TransaksiController::class, 'TransaksiEdit'])->name('transaksi.edit');
+    Route::post('/update/{id}', [TransaksiController::class, 'TransaksiUpdate'])->name('transaksis.update');
     Route::get('/delete/{id}', [TransaksiController::class, 'TransaksiDelete'])->name('transaksi.delete');
+});
+
+//route pelayanan
+Route::prefix('pelayanan')->group(function () {
+    Route::get('/view', [PelayananController::class, 'PelayananView'])->name('backendss.pelayanan.view');
+    Route::get('/add', [PelayananController::class, 'PelayananAdd'])->name('backendss.pelayanan.add');
+    Route::post('/store', [PelayananController::class, 'PelayananStore'])->name('pelayanan.store');
+    Route::get('/edit/{id}', [PelayananController::class, 'PelayananEdit'])->name('pelayanan.edit');
+    Route::post('/update/{id}', [PelayananController::class, 'PelayananUpdate'])->name('pelayanan.update');
+    Route::get('/delete/{id}', [PelayananController::class, 'PelayananDelete'])->name('pelayanan.delete');
 });
