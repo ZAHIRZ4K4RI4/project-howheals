@@ -39,7 +39,7 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
-                                <strong class="card-title">Tambahkan Transaksi</strong>
+                                <strong class="card-title">Data Transaksi</strong>
                             </div>
                             <div class="card-body">
                                 <table id="bootstrap-data-table-export" class="table table-striped table-bordered">

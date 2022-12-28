@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>
-      HOWHEALS
+      HOWHEAL
     </title>
     <meta name="description" content="Simple landind page" />
     <meta name="keywords" content="" />
@@ -36,7 +36,7 @@
               />
             </svg> --}}
             {{-- <img src="images/img3.PNG" width="100" height="60"> --}}
-            HOWHEALS
+            HOWHEAL.SAC
           </a>
         </div>
         <div class="block lg:hidden pr-4">
@@ -139,7 +139,7 @@
           <div class="w-full sm:w-1/2 p-6 mt-6">
             <div class="align-middle">
               <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
-                Reparasi Jahit Sol Sepatu
+                Re colour Sepatu
               </h3>
               <p class="text-gray-600 mb-8">
                 <img src="images/img2.JPEG" width="1000" height="600">

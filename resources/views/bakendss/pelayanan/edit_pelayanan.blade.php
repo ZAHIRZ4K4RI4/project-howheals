@@ -9,8 +9,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Sufee Admin - HTML5 Admin Template</title>
-    <meta name="description" content="Sufee Admin - HTML5 Admin Template">
+    <title>Edit Data Pelayanan</title>
+    <meta name="description" content="Edit Data Pelayanan">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="apple-touch-icon" href="apple-icon.png">
@@ -43,7 +43,7 @@
             <div class="col-sm-6">
                 <div class="page-header float-left-bold">
                     <div class="page-title-bold">
-                        <h1>Data Pelayanan</h1>
+                        <h1>Edit Data</h1>
                     </div>
                 </div>
             </div>
