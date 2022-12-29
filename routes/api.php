@@ -6,7 +6,7 @@ use App\Http\Controllers\Api\CustomerController;
 use App\Http\Controllers\Api\TransaksiController;
 use App\Http\Controllers\Api\PelayananController;
 use App\Http\Controllers\Api\UserController;
-// use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,5 +28,5 @@ Route::post('/transaksi',[transaksiController::class, 'store']);
 Route::post('/pelayanan',[pelayananController::class, 'store']);
 
 // Route::post('register',[UserController::class, 'register']);
-Route::post('register',[UserController::class, 'register']);
-Route::post('login',[authController::class, 'login']);
+Route::post('register',[AuthController::class, 'register']);
+Route::post('login',[AuthController::class, 'login']);

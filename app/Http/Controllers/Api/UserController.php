@@ -1,36 +1,36 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+// namespace App\Http\Controllers\Api;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use App\Models\User;
+// use App\Http\Controllers\Controller;
+// use Illuminate\Http\Request;
+// use App\Models\User;
 
-class UserController extends Controller
-{
-    public function register(Request $request)
-    {
-    $validateData = $request->validate([
-        'name' => 'required|max:25',
-        'email' => 'email|required|unique:users',
-        'password' => 'required|confirmed',
-    ]);
+// class UserController extends Controller
+// {
+//     public function register(Request $request)
+//     {
+//     $validateData = $request->validate([
+//         'name' => 'required|max:25',
+//         'email' => 'email|required|unique:users',
+//         'password' => 'required|confirmed',
+//     ]);
 
-    $user = new user([
-        'name' => $request->name,
-        'email' => $request->email,
-        'password' => bcrypt($request->password)
-    ]);
-    $user->save();
-    return response()->json($user, 201);
-   }
-
-//    public function login(Request $request)
+//     $user = new user([
+//         'name' => $request->name,
+//         'email' => $request->email,
+//         'password' => bcrypt($request->password)
+//     ]);
+//     $user->save();
+//     return response()->json($user, 201);
+//    }
+//   public function login(Request $request)
 //     {
 //     $validateData = $request->validate([
 //         'email' => 'email|required',
 //         'password' => 'required',
 //     ]);
+ 
 
 //     $login_detail = request(['email', 'password']);
 
@@ -52,4 +52,4 @@ class UserController extends Controller
 //         ], 200);
 //    } 
 
-}
+// }

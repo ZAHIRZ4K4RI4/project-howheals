@@ -6,22 +6,22 @@
         <div class="col-sm-7">
             <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
             <div class="header-left">
-                <button class="search-trigger"><i class="fa fa-search"></i></button>
+                {{-- <button class="search-trigger"><i class="fa fa-search"></i></button> --}}
                 <div class="form-inline">
-                    <form class="search-form">
+                    {{-- <form class="search-form"> --}}
                         <input class="form-control mr-sm-2" type="text" placeholder="Search ..." aria-label="Search">
                         <button class="search-close" type="submit"><i class="fa fa-close"></i></button>
                     </form>
                 </div>
 
                 <div class="dropdown for-message">
-                    <button class="btn btn-secondary dropdown-toggle" type="button"
+                    {{-- <button class="btn btn-secondary dropdown-toggle" type="button"
                         id="message"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="ti-email"></i>
-                        <span class="count bg-primary">9</span>
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> --}}
+                        {{-- <i class="ti-email"></i> --}}
+                        {{-- <span class="count bg-primary"></span> --}}
                     </button>
-                    <div class="dropdown-menu" aria-labelledby="message">
+                    {{-- <div class="dropdown-menu" aria-labelledby="message">
                         <p class="red">You have 4 Mails</p>
                         <a class="dropdown-item media bg-flat-color-1" href="#">
                         <span class="photo media-left"><img alt="avatar" src="images/avatar/1.jpg"></span>
@@ -55,7 +55,7 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur</p>
                         </span>
                     </a>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
