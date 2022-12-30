@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\CustomerController;
 use App\Http\Controllers\Api\TransaksiController;
 use App\Http\Controllers\Api\PelayananController;
-use App\Http\Controllers\Api\UserController;
+// use App\Http\Controllers\Api\UserController;
 use App\Http\Controllers\Api\AuthController;
 
 /*
