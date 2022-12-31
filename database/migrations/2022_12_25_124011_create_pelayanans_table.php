@@ -15,11 +15,11 @@ return new class extends Migration
     {
         Schema::create('pelayanans', function (Blueprint $table) {
             $table->id();
-            $table->date('type_sepatu',);
-            $table->integer('pelayanan');
-            $table->date('harga');
+            $table->string('type_sepatu',);
+            $table->string('pelayanan');
+            $table->integer('harga');
             $table->date('tanggal_masuk');
-            $table->date('estimasi_selesai');
+            $table->string('estimasi_selesai');
             $table->timestamps();
         });
     }

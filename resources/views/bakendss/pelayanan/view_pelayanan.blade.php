@@ -75,7 +75,7 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <a href="{{ route('backendss.pelayanan.add')}}"><button class="btn btn-dark" type="submit">Tambahkan Data</button></a>
+                            <a href="{{ route('bakendss.pelayanan.add_pelayanan')}}"><button class="btn btn-dark" type="submit">Tambahkan Data</button></a>
                         </div>
                     </div>
                 </div>

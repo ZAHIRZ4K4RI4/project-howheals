@@ -56,9 +56,9 @@ Route::prefix('transaksis')->group(function () {
 });
 
 //route pelayanan
-Route::prefix('pelayanan')->group(function () {
-    Route::get('/view', [PelayananController::class, 'PelayananView'])->name('backendss.pelayanan.view');
-    Route::get('/add', [PelayananController::class, 'PelayananAdd'])->name('backendss.pelayanan.add');
+Route::prefix('pelayanans')->group(function () {
+    Route::get('/view', [PelayananController::class, 'PelayananView'])->name('bakendss.pelayanan.view_pelayanan');
+    Route::get('/add', [PelayananController::class, 'PelayananAdd'])->name('bakendss.pelayanan.add_pelayanan');
     Route::post('/store', [PelayananController::class, 'PelayananStore'])->name('pelayanan.store');
     Route::get('/edit/{id}', [PelayananController::class, 'PelayananEdit'])->name('pelayanan.edit');
     Route::post('/update/{id}', [PelayananController::class, 'PelayananUpdate'])->name('pelayanan.update');
