@@ -26,8 +26,8 @@
                 <li class="menu-item-has-children dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Pelayanan</a>
                     <ul class="sub-menu children dropdown-menu">
-                        <li><i class="fa fa-table"></i><a href="{{ route('backendss.pelayanan.view')}}">Data Pelayanan</a></li>
-                        <li><i class="fa fa-table"></i><a href="{{ route('backendss.pelayanan.add')}}">Tambah Pelayanan</a></li>
+                        <li><i class="fa fa-table"></i><a href="{{ route('bakendss.pelayanan.view_pelayanan')}}">Data Pelayanan</a></li>
+                        <li><i class="fa fa-table"></i><a href="{{ route('bakendss.pelayanan.add_pelayanan')}}">Tambah Pelayanan</a></li>
                     </ul>
                 </li>
             </li>

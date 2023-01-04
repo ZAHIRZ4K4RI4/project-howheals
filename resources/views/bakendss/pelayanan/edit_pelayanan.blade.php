@@ -43,7 +43,7 @@
             <div class="col-sm-6">
                 <div class="page-header float-left-bold">
                     <div class="page-title-bold">
-                        <h1>Edit Data</h1>
+                        <h1>Edit Pelayanan</h1>
                     </div>
                 </div>
             </div>
@@ -62,22 +62,29 @@
                                     <div class="form-group">
                                         <label class=" form-control-label">Type Sepatu</label>
                                         <div class="input-group">
-                                            <div class="input-group-addon"><i class="fa fa-male"></i></div>
-                                            <input class="form-control" name="type_sepatu" value="{{$editData->type_sepatu}}">
+                                            {{-- <div class="input-group-addon"><i class="fa fa-male"></i></div> --}}
+                                            <input class="form-control" name="type_sepatu">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class=" form-control-label">Pelayanan</label>
                                         <div class="input-group">
-                                            <div class="input-group-addon"><i class="fa fa-phone"></i></div>
-                                            <input class="form-control" name="pelayanan" value="{{$editData->pelayanan}}">
+                                            {{-- <div class="input-group-addon"><i class="fa fa-phone"></i></div> --}}
+                                            <input class="form-control" name="pelayanan">
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class=" form-control-label">Tanggal Masuk</label>
+                                        <label class=" form-control-label">Status</label>
                                         <div class="input-group">
-                                            <div class="input-group-addon"><i class="fa fa-phone"></i></div>
-                                            <input class="form-control" name="tanggal_masuk" value="{{$editData->tanggal_masuk}}">
+                                            {{-- <div class="input-group-addon"><i class="fa fa-phone"></i></div> --}}
+                                            <input class="form-control" name="status">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class=" form-control-label">Harga</label>
+                                        <div class="input-group">
+                                            {{-- <div class="input-group-addon"><i class="fa fa-phone"></i></div> --}}
+                                            <input class="form-control" name="harga">
                                         </div>
                                     </div>
                                 </div>
@@ -91,24 +98,27 @@
                                 </div>
                                 <div class="card-body card-block">
                                     <div class="form-group">
-                                        <label class=" form-control-label">Harga</label>
-                                        <div class="input-group">
-                                            <div class="input-group-addon"><i class="fa fa-credit-card"></i></div>
-                                            <input class="form-control" name="harga" value="{{$editData->harga}}">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
                                         <label class=" form-control-label">Tanggal Masuk</label>
                                         <div class="input-group">
-                                            <div class="input-group-addon"><i class="fa fa-credit-card"></i></div>
-                                            <input class="form-control" name="tanggal_masuk" value="{{$editData->tanggal_masuk}}">
+                                            {{-- <div class="input-group-addon"><i class="fa fa-credit-card"></i></div> --}}
+                                            <input class="form-control" name="tanggal_masuk">
+                                        </div>
                                     </div>
                                     <div class="form-group">
                                         <label class=" form-control-label">Estimasi Selesai</label>
                                         <div class="input-group">
-                                            <div class="input-group-addon"><i class="fa fa-credit-card"></i></div>
-                                            <input class="form-control" name="estimasi_selesai" value="{{$editData->estimasi_selesai}}">
+                                            {{-- <div class="input-group-addon"><i class="fa fa-credit-card"></i></div> --}}
+                                            <input class="form-control" name="estimasi_selesai">
                                         </div>   
+                                    </div>
+                                    <div class="form_group mb-3">
+                                        <label for="inputState" class="form-control-label">Customers</label>
+                                        <select id="inputState" class="form-control" name="id_customers">
+                                          <option selected>Pilih Customers</option>
+                                          @foreach ($editData as $item)
+                                          <option value="{{$item->id}}">{{$item->nama}}</option>
+                                          @endforeach
+                                        </select>
                                     </div>
                                     <button type="submit"  class="btn btn-rounded btn-info">TAMBAHKAN</button>
                                 </div>

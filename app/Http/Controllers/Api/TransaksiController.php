@@ -14,6 +14,7 @@ class TransaksiController extends Controller
         'tanggal_masuk' => 'required|max:100',
         'total_bayar' => 'required|max:255',
         'tanggal_bayar' => 'required|max:225',
+        'id_pelayanans' => 'required|max:225',
     ]);
 
     $new_transaksi = new Transaksi($validateData);

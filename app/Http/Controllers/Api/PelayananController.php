@@ -14,9 +14,11 @@ class PelayananController extends Controller
     $validateData = $request->validate([
         'type_sepatu' => 'required|max:100',
         'pelayanan' => 'required|max:255',
+        'status' => 'required|max:255',
         'harga' => 'required|max:225',
         'tanggal_masuk' => 'required|max:225',
         'estimasi_selesai' => 'required|max:225',
+        'id_customers' => 'required|max:225',
     ]);
 
     $new_pelayanan = new Pelayanan($validateData);

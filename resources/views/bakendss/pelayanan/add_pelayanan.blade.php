@@ -9,7 +9,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Sufee Admin - HTML5 Admin Template</title>
+    <title>Tambahkan Data</title>
     <meta name="description" content="Sufee Admin - HTML5 Admin Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -62,21 +62,28 @@
                                 <div class="form-group">
                                     <label class=" form-control-label">Type Sepatu</label>
                                     <div class="input-group">
-                                        <div class="input-group-addon"><i class="fa fa-male"></i></div>
+                                        {{-- <div class="input-group-addon"><i class="fa fa-male"></i></div> --}}
                                         <input class="form-control" name="type_sepatu">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class=" form-control-label">Pelayanan</label>
                                     <div class="input-group">
-                                        <div class="input-group-addon"><i class="fa fa-phone"></i></div>
+                                        {{-- <div class="input-group-addon"><i class="fa fa-phone"></i></div> --}}
                                         <input class="form-control" name="pelayanan">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class=" form-control-label">Status</label>
+                                    <div class="input-group">
+                                        {{-- <div class="input-group-addon"><i class="fa fa-phone"></i></div> --}}
+                                        <input class="form-control" name="status">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class=" form-control-label">Harga</label>
                                     <div class="input-group">
-                                        <div class="input-group-addon"><i class="fa fa-phone"></i></div>
+                                        {{-- <div class="input-group-addon"><i class="fa fa-phone"></i></div> --}}
                                         <input class="form-control" name="harga">
                                     </div>
                                 </div>
@@ -93,16 +100,25 @@
                                 <div class="form-group">
                                     <label class=" form-control-label">Tanggal Masuk</label>
                                     <div class="input-group">
-                                        <div class="input-group-addon"><i class="fa fa-credit-card"></i></div>
+                                        {{-- <div class="input-group-addon"><i class="fa fa-credit-card"></i></div> --}}
                                         <input class="form-control" name="tanggal_masuk">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class=" form-control-label">Estimasi Selesai</label>
                                     <div class="input-group">
-                                        <div class="input-group-addon"><i class="fa fa-credit-card"></i></div>
+                                        {{-- <div class="input-group-addon"><i class="fa fa-credit-card"></i></div> --}}
                                         <input class="form-control" name="estimasi_selesai">
                                     </div>   
+                                </div>
+                                <div class="form_group mb-3">
+                                    <label for="inputState" class="form-control-label">Customers</label>
+                                    <select id="inputState" class="form-control" name="id_customers">
+                                      <option selected>Pilih Customers</option>
+                                      @foreach ($data as $item)
+                                      <option value="{{$item->id}}">{{$item->nama}}</option>
+                                      @endforeach
+                                    </select>
                                 </div>
                                 <button type="submit"  class="btn btn-rounded btn-info">TAMBAHKAN</button>
                             </div>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
@@ -49,32 +50,18 @@ class AuthController extends Controller
     public function login(Request $request)
     {
         $loginData = $request->validate([
-            'email' => 'email|required',
+            'email' => 'required',
             'password' => 'required',
         ]);
- 
-            return response()->json($loginData, 201);
 
-            $curl = curl_init();
+        $login_detail = request(['email', 'password']);
+        if (!Auth:: attempt($login_detail)) {
+            return response()->json(['error' => 'Login Failed, Please Check Your Login Detail'],401);
+        }
+        $user = $request->user();
+        $token = $user->createToken("auth_token")->plainTextToken;
+        $user->$token = $token;
 
-            curl_setopt_array($curl, array(
-                CURLOPT_URL => 'localhost:8000/api/login',
-                CURLOPT_RETURNTRANSFER => true,
-                CURLOPT_ENCODING => '',
-                CURLOPT_MAXREDIRS => 10,
-                CURLOPT_TIMEOUT => 0,
-                CURLOPT_FOLLOWLOCATION => true,
-                CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-                CURLOPT_CUSTOMREQUEST => 'GET',
-                CURLOPT_HTTPHEADER => array(
-                    'Accept: application/json'
-                ),
-            ));
-    
-            $response = curl_exec($curl);
-    
-            curl_close($curl);
-            echo $response;
-
+            return response()->json($user, 201);
         }
     }

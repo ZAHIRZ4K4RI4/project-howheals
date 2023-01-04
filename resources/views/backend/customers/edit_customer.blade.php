@@ -81,14 +81,14 @@
                                     <div class="form-group">
                                         <label class=" form-control-label">Nama</label>
                                         <div class="input-group">
-                                            <div class="input-group-addon"><i class="fa fa-male"></i></div>
+                                            {{-- <div class="input-group-addon"><i class="fa fa-male"></i></div> --}}
                                             <input class="form-control" name="nama" value="{{$editData->nama}}">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class=" form-control-label">Telp</label>
                                         <div class="input-group">
-                                            <div class="input-group-addon"><i class="fa fa-phone"></i></div>
+                                            {{-- <div class="input-group-addon"><i class="fa fa-phone"></i></div> --}}
                                             <input class="form-control" name="telepon" value="{{$editData->telepon}}">
                                         </div>
                                     </div>
@@ -105,18 +105,30 @@
                                     <div class="form-group">
                                         <label class=" form-control-label">Alamat</label>
                                         <div class="input-group">
-                                            <div class="input-group-addon"><i class="fa fa-credit-card"></i></div>
+                                            {{-- <div class="input-group-addon"><i class="fa fa-credit-card"></i></div> --}}
                                             <input class="form-control" name="alamat" value="{{$editData->alamat}}">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class=" form-control-label">Email</label>
                                         <div class="input-group">
-                                            <div class="input-group-addon"><i class="fa fa-credit-card"></i></div>
+                                            {{-- <div class="input-group-addon"><i class="fa fa-credit-card"></i></div> --}}
                                             <input class="form-control" name="email" value="{{$editData->email}}">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class=" form-control-label">Kode Customer</label>
+                                        <div class="input-group">
+                                            {{-- <div class="input-group-addon"><i class="fa fa-phone"></i></div> --}}
+                                            <input class="form-control" name="kode_customer" value="{{$editData->kode_customer}}">
+                                        </div>
+                                    </div>
+                                    <button type="submit"  class="btn btn-rounded btn-info">TAMBAHKAN</button>
                                 </div>
                             </div>
-                           <button type="submit"  class="btn btn-rounded btn-info">TAMBAHKAN</button>
+                            
+                            </div>
+                          
                         </div>
                     </div>
                 </div><!-- .animated -->

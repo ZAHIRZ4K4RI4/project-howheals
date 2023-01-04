@@ -63,15 +63,22 @@
                             <div class="form-group">
                                 <label class=" form-control-label">Nama</label>
                                 <div class="input-group">
-                                    <div class="input-group-addon"><i class="fa fa-male"></i></div>
+                                    {{-- <div class="input-group-addon"><i class="fa fa-male"></i></div> --}}
                                     <input class="form-control" name="nama">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class=" form-control-label">Telp</label>
                                 <div class="input-group">
-                                    <div class="input-group-addon"><i class="fa fa-phone"></i></div>
+                                    {{-- <div class="input-group-addon"><i class="fa fa-phone"></i></div> --}}
                                     <input class="form-control" name="telepon">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class=" form-control-label">Alamat</label>
+                                <div class="input-group">
+                                    {{-- <div class="input-group-addon"><i class="fa fa-credit-card"></i></div> --}}
+                                    <input class="form-control" name="alamat">
                                 </div>
                             </div>
                         </div>
@@ -85,27 +92,30 @@
                             {{-- <strong>Masked Input</strong> <small> Small Text Mask</small> --}}
                         </div>
                         <div class="card-body card-block">
-                            <div class="form-group">
-                                <label class=" form-control-label">Alamat</label>
-                                <div class="input-group">
-                                    <div class="input-group-addon"><i class="fa fa-credit-card"></i></div>
-                                    <input class="form-control" name="alamat">
-                                </div>
-                            </div>
+                            
                             <div class="form-group">
                                 <label class=" form-control-label">Email</label>
                                 <div class="input-group">
-                                    <div class="input-group-addon"><i class="fa fa-credit-card"></i></div>
+                                    {{-- <div class="input-group-addon"><i class="fa fa-credit-card"></i></div> --}}
                                     <input class="form-control" name="email">
+                                </div>  
+                            </div>
+                           <div class="form-group">
+                                <label class=" form-control-label">Kode Customer</label>
+                                <div class="input-group">
+                                    {{-- <div class="input-group-addon"><i class="fa fa-credit-card"></i></div> --}}
+                                    <input class="form-control" name="kode_customer">
+                                </div>
+                            </div>    
+                            <button type="submit"  class="btn btn-rounded btn-info">TAMBAHKAN</button>
                         </div>
                     </div>
-                    <button type="submit"  class="btn btn-rounded btn-info">TAMBAHKAN</button>
                 </div>
+                
             </div>
-                        
       </div><!-- .animated -->
     </div><!-- .content -->
-
+   
 </div><!-- /#right-panel -->
 </form>
        

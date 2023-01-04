@@ -12,6 +12,9 @@ class Pelayanan extends Model
     protected $primarykey='id';
     public $timestamps=true;
     protected $fillable=[
-        'type_sepatu','pelayanan','harga','tanggal_masuk','estimasi_selesai'
+        'type_sepatu','pelayanan','status','harga','tanggal_masuk','estimasi_selesai','id_customers'
     ];
+    public function customers(){
+        return $this->belongsTo(Customer::class, 'id_customers','id');
+    }
 }

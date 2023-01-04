@@ -34,6 +34,11 @@
         <!-- Header-->
         <div class="content mt-3">
             <div class="animated fadeIn">
+                <div class="tambahdata " style="margin-bottom: 10px">
+                    <a href="{{ route('transaksis.export') }}" >
+                        <button type="button" class="btn btn-info">Cetak Laporan</button>
+                    </a>
+                </div>
                 <div class="row">
 
                     <div class="col-md-12">
@@ -50,8 +55,9 @@
                                                 <td>Tanggal Masuk</td>
                                                 <td>Total Bayar</td>
                                                 <td>Tanggal Bayar</td>
+                                                <td>Customer</td>
                                                 <td>Action</td>
-                                                <td>
+                                                
                                             </tr>        
                                         </tbody>
                                     </thead>    
@@ -62,6 +68,7 @@
                                             <td>{{$transaksi->tanggal_masuk}}</td>
                                             <td>{{$transaksi->total_bayar}}</td>
                                             <td>{{$transaksi->tanggal_bayar}}</td>
+                                            <td>{{$transaksi->pelayanans->customers->nama}}</td>
                                             <td>
                                                 <a href="{{route('transaksi.edit', $transaksi->id)}}" class="btn btn-info">Edit</a>
                                                 <a href="{{route('transaksi.delete', $transaksi->id)}}" class="btn btn-danger">Delete</a>
@@ -71,7 +78,7 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <a href="{{ route('backends.transaksi.add')}}"><button class="btn btn-dark" type="submit">Tambahkan Data</button></a>
+                            <a href="{{ route('backends.transaksi.add')}}"><button type="submit" class="btn btn-rounded btn-info">Tambahkan</button>
                         </div>
                     </div>
                 </div>

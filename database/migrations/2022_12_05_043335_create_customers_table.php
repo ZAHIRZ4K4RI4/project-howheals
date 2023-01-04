@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('telepon',12);
             $table->string('alamat',100);
             $table->string('email',100);
+            $table->integer('kode_customer',10);
             $table->timestamps();
         });
     }

@@ -43,7 +43,7 @@
             <div class="col-sm-6">
                 <div class="page-header float-left-bold">
                     <div class="page-title-bold">
-                        <h1>Data Transaksi</h1>
+                        <h1>Edit Transaksi</h1>
                     </div>
                 </div>
             </div>
@@ -63,20 +63,20 @@
                                     <div class="form-group">
                                         <label class=" form-control-label">Tanggal Masuk</label>
                                         <div class="input-group">
-                                            <div class="input-group-addon"><i class="fa fa-phone"></i></div>
+                                            {{-- <div class="input-group-addon"><i class="fa fa-phone"></i></div> --}}
                                             <input class="form-control" name="tanggal_masuk" value="{{$editData->tanggal_masuk}}">
                                         </div>
                                     </div>                           
                                     <div class="form-group">
                                         <label class=" form-control-label">Total Bayar</label>
                                         <div class="input-group">
-                                            <div class="input-group-addon"><i class="fa fa-credit-card"></i></div>
+                                            {{-- <div class="input-group-addon"><i class="fa fa-credit-card"></i></div> --}}
                                             <input class="form-control" name="total_bayar" value="{{$editData->total_bayar}}">
                                     </div>
                                     <div class="form-group">
                                         <label class=" form-control-label">Tanggal Bayar</label>
                                         <div class="input-group">
-                                            <div class="input-group-addon"><i class="fa fa-credit-card"></i></div>
+                                            {{-- <div class="input-group-addon"><i class="fa fa-credit-card"></i></div> --}}
                                             <input class="form-control" name="tanggal_bayar" value="{{$editData->tanggal_bayar}}">
                                         </div>   
                                     </div>

@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\Backend;
 
+use App\Exports\CustomerExport;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Customer;
+use App\Models\User;
 
 class CustomerController extends Controller
 {
@@ -33,11 +35,18 @@ class CustomerController extends Controller
 
      public function CustomerStore(Request $request)
      {
+        $akun = new User();
+        $akun->name = $request->nama;
+        $akun->email = $request->kode_customer;
+        $akun->password = bcrypt($request->telepon);
+        $akun->save();
+
          $data = new Customer();
          $data->nama = $request->nama;
          $data->telepon = $request->telepon;
          $data->alamat = $request->alamat;
          $data->email = $request->email;
+         $data->kode_customer = $request->kode_customer;
          $data->save();
 
          return redirect()->route('backend.customers.view')->with('info', 'Tambah Customer Berhasil');
@@ -55,6 +64,7 @@ class CustomerController extends Controller
          $data->telepon = $request->telepon;
          $data->alamat = $request->alamat;
          $data->email = $request->email;
+         $data->kode_customer = $request->kode_customer;
          $data->save();
 
          return redirect()->route('backend.customers.view')->with('info', 'Update Customer Berhasil');
@@ -67,6 +77,11 @@ class CustomerController extends Controller
 
 
          return redirect()->route('backend.customers.view')->with('info', 'Delete Customer Berhasil');
+     }
+
+     public function export()
+     {
+        return (new CustomerExport)->download('data_customers.xlsx'); 
      }
 }
 

@@ -34,8 +34,13 @@
         <!-- Header-->
         <div class="content mt-3">
             <div class="animated fadeIn">
+                <div class="tambahdata " style="margin-bottom: 10px">
+                    <a href="{{ route('customers.export') }}" >
+                        <button type="button" class="btn btn-info">Cetak Laporan</button>
+                    </a>
+                </div>
                 <div class="row">
-
+                    
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
@@ -50,6 +55,7 @@
                                             <th>Telepon</th>
                                             <th>Alamat</th>
                                             <th>Email</th>
+                                            <th>Kode Customer</th>
                                             <th>Action</th>     
                                         </tr> 
                                     </thead>
@@ -61,6 +67,7 @@
                                             <td>{{$customer->telepon}}</td>
                                             <td>{{$customer->alamat}}</td>
                                             <td>{{$customer->email}}</td>
+                                            <td>{{$customer->kode_customer}}</td>
                                             <td>
                                                 <a href="{{route('customers.edit', $customer->id)}}" class="btn btn-info">Edit</a>
                                                 <a href="{{route('customers.delete', $customer->id)}}" class="btn btn-danger">Delete</a>

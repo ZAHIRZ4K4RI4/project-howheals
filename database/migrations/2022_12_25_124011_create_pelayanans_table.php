@@ -17,9 +17,12 @@ return new class extends Migration
             $table->id();
             $table->string('type_sepatu',);
             $table->string('pelayanan');
+            $table->string('status');
             $table->integer('harga');
             $table->date('tanggal_masuk');
             $table->string('estimasi_selesai');
+            $table->unsignedBigInteger('id_customers');
+            $table->foreign('id_customers')->references('id')->on('customers')->cascadeOnDelete()->cascadeOnUpdate();
             $table->timestamps();
         });
     }

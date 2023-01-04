@@ -62,22 +62,31 @@
                                 <div class="form-group">
                                     <label class=" form-control-label">Tanggal Masuk</label>
                                     <div class="input-group">
-                                        <div class="input-group-addon"><i class="fa fa-phone"></i></div>
+                                        {{-- <div class="input-group-addon"><i class="fa fa-phone"></i></div> --}}
                                         <input class="form-control" name="tanggal_masuk">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class=" form-control-label">Total Bayar</label>
                                     <div class="input-group">
-                                        <div class="input-group-addon"><i class="fa fa-credit-card"></i></div>
+                                        {{-- <div class="input-group-addon"><i class="fa fa-credit-card"></i></div> --}}
                                         <input class="form-control" name="total_bayar">
                                 </div>
                                 <div class="form-group">
                                     <label class=" form-control-label">Tanggal Bayar</label>
                                     <div class="input-group">
-                                        <div class="input-group-addon"><i class="fa fa-credit-card"></i></div>
+                                        {{-- <div class="input-group-addon"><i class="fa fa-credit-card"></i></div> --}}
                                         <input class="form-control" name="tanggal_bayar">
                                     </div>   
+                                </div>
+                                <div class="form_group mb-3">
+                                    <label for="inputState" class="form-control-label">Customers</label>
+                                    <select id="inputState" class="form-control" name="id_pelayanans">
+                                      <option selected>Pilih Customers</option>
+                                      @foreach ($data as $item)
+                                      <option value="{{$item->id}}">{{$item->customers->nama}}</option>
+                                      @endforeach
+                                    </select>
                                 </div>
                                 <button type="submit"  class="btn btn-rounded btn-info">TAMBAHKAN</button>
                             </div>

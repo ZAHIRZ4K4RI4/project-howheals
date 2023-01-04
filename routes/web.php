@@ -43,6 +43,7 @@ Route::prefix('customers')->group(function () {
     Route::get('/edit/{id}', [CustomerController::class, 'CustomerEdit'])->name('customers.edit');
     Route::post('/update/{id}', [CustomerController::class, 'CustomerUpdate'])->name('customers.update');
     Route::get('/delete/{id}', [CustomerController::class, 'CustomerDelete'])->name('customers.delete');
+    Route::get('Customer', [CustomerController::class, 'export'])->name('customers.export');
 });
 
 //route transaksi
@@ -53,6 +54,8 @@ Route::prefix('transaksis')->group(function () {
     Route::get('/edit/{id}', [TransaksiController::class, 'TransaksiEdit'])->name('transaksi.edit');
     Route::post('/update/{id}', [TransaksiController::class, 'TransaksiUpdate'])->name('transaksis.update');
     Route::get('/delete/{id}', [TransaksiController::class, 'TransaksiDelete'])->name('transaksi.delete');
+    Route::get('Transaksi', [TransaksiController::class, 'export'])->name('transaksis.export');
+    
 });
 
 //route pelayanan
@@ -63,4 +66,5 @@ Route::prefix('pelayanans')->group(function () {
     Route::get('/edit/{id}', [PelayananController::class, 'PelayananEdit'])->name('pelayanan.edit');
     Route::post('/update/{id}', [PelayananController::class, 'PelayananUpdate'])->name('pelayanan.update');
     Route::get('/delete/{id}', [PelayananController::class, 'PelayananDelete'])->name('pelayanan.delete');
+    Route::get('Pelayanan', [PelayananController::class, 'export'])->name('pelayanans.export');
 });

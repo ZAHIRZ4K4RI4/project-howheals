@@ -34,8 +34,12 @@
         <!-- Header-->
         <div class="content mt-3">
             <div class="animated fadeIn">
-                <div class="row">
-
+                <div class="tambahdata " style="margin-bottom: 10px">
+                    <a href="{{ route('pelayanans.export') }}" >
+                        <button type="button" class="btn btn-info">Cetak Laporan</button>
+                    </a>
+                </div>
+                <div class="row">                    
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
@@ -49,9 +53,11 @@
                                                 <td>Id</td>
                                                 <td>Type Sepatu</td>
                                                 <td>Pelayanan</td>
+                                                <td>Status</td>
                                                 <td>Harga</td>
                                                 <td>Tanggal Masuk</td>
                                                 <td>Estimasi Selesai</td>
+                                                <td>Customer</td>
                                                 <td>Action</td>
                                                 <td>
                                             </tr>        
@@ -63,9 +69,11 @@
                                             <td>{{ $key+1 }}</td>
                                             <td>{{$pelayanan->type_sepatu}}</td>
                                             <td>{{$pelayanan->pelayanan}}</td>
+                                            <td>{{$pelayanan->status}}</td>
                                             <td>{{$pelayanan->harga}}</td>
                                             <td>{{$pelayanan->tanggal_masuk}}</td>
                                             <td>{{$pelayanan->estimasi_selesai}}</td>
+                                            <td>{{$pelayanan->customers->nama}}</td>
                                             <td>
                                                 <a href="{{route('pelayanan.edit', $pelayanan->id)}}" class="btn btn-info">Edit</a>
                                                 <a href="{{route('pelayanan.delete', $pelayanan->id)}}" class="btn btn-danger">Delete</a>
@@ -75,7 +83,7 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <a href="{{ route('bakendss.pelayanan.add_pelayanan')}}"><button class="btn btn-dark" type="submit">Tambahkan Data</button></a>
+                            <a href="{{ route('bakendss.pelayanan.add_pelayanan')}}"><button type="submit" class="btn btn-rounded btn-info">Tambahkan</button>
                         </div>
                     </div>
                 </div>

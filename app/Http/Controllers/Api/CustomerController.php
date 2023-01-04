@@ -14,6 +14,7 @@ class CustomerController extends Controller
             'telepon' => 'required|max:255',
             'alamat' => 'required|max:225',
             'email' => 'required|max:255',
+            'kode_customer' => 'required|max:255',
         ]);
     
         $new_customer = new Customer($validateData);

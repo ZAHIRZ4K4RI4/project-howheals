@@ -18,6 +18,8 @@ return new class extends Migration
             $table->date('tanggal_masuk',);
             $table->integer('total_bayar');
             $table->date('tanggal_bayar');
+            $table->unsignedBigInteger('id_pelayanans');
+            $table->foreign('id_pelayanans')->references('id')->on('pelayanans')->cascadeOnDelete()->cascadeOnUpdate();
             $table->timestamps();
         });
     }

@@ -12,6 +12,9 @@ class Transaksi extends Model
     protected $primarykey='id';
     public $timestamps=true;
     protected $fillable=[
-        'tanggal_masuk','total_bayar','tanggal_bayar'
+        'tanggal_masuk','total_bayar','tanggal_bayar','id_pelayanans'
     ];
+    public function pelayanans(){
+        return $this->belongsTo(Pelayanan::class, 'id_pelayanans','id');
+    }
 }
